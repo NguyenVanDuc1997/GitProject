@@ -3,41 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>Thông tin hàng hóa</title>
+    <style>
+        #myForm{
+            display: none;
+        }
+        td {
+            padding: 10px;
+            line-height: 2px;
+        }
+        textarea {
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showForm() {
+            document.getElementById("myForm").style.display="block";
+            document.getElementById("myForm2").style.display="block";
+        }
+        function closeForm() {
+            document.getElementById("myForm2").style.display = "none";
+        }
+    </script>
 </head>
 <body>
 <h1>Thông tin hàng hóa</h1>
-<form action="">
-    <fieldset >
-    Tên hàng: <input type="text"><br>
 
-    Nơi gửi:
-    <input type="radio" name="from" value="">Hà Nội
-    <input type="radio" name="from" value="">Hải Phòng
-    <input type="radio" name="from" value="">Lào Cai <br><br>
-
-    Dịch vụ kèm:
-    <input type="checkbox">Giao nhanh
-    <input type="checkbox">Quà kèm theo
-    <input type="checkbox">Đóng gói đẹp
-
+    <fieldset>
+        <legend>Đăng nhập</legend>
+        Tài khoản<input type="text"> <br><br>
+        Mật khẩu <input type="password"> <br> <br>
+        <input type="hidden" value="1234">
+        <input type="submit" value="Đăng nhập">
+        <input type="reset" value="Nhập lại">
     </fieldset>
+    <br>
+    <form action="#" method="p" id="myForm">
+    <table  cellpadding="10">
+        <tr>
+            <th>Tên hàng:</th>
+            <td><input type="text" placeholder="Cá khô"><br></td>
+        </tr>
+
+        <tr>
+            <th>Nơi gửi:</th>
+            <td align="bottom"><input type="radio" name="from" value="">Hà Nội
+                <input type="radio" name="from" value="">Hải Phòng
+                <input type="radio" name="from" value="">Lào Cai <br><br></td>
+        </tr>
+
+        <tr>
+            <th>Dịch vụ kèm:</th>
+            <td><input type="checkbox">Giao nhanh
+                <input type="checkbox">Quà kèm theo
+                <input type="checkbox">Đóng gói đẹp
+                <input type="hidden" name="secret" value="id khach hang">
+                <br><br></td>
+        </tr>
+
+        <tr>
+            <th>Loại hàng:</th>
+            <td><select name="" id="category">
+                <option value="">Hàng dễ vỡ</option>
+                <option value="">Hàng tươi sống</option>
+                <option value="">Hàng khô</option>
+
+            </select> <br><br></td>
+        </tr>
+
+        <tr>
+            <th>Ngày giao:</th>
+            <td><input type="date"> <br><br></td>
+        </tr>
+        <tr>
+            <th>Ghi chú</th>
+            <td><textarea name="" id="" cols="30" rows="10"></textarea><br><br><br></td>
+        </tr>
+
+        <tr>
+            <th>Ảnh hàng:</th>
+            <td><input type="file"> <br><br><br>
+        </tr>
+        <tr>
+            <th>&nbsp;</th>
+            <td><input type="submit" value="Submit">
+                <input type="reset" value="Reset"> <br><br>
+               </td></td>
+        </tr>
+
+    </table>
+    </form>
+<br>
+<h3>Danh sách hàng hóa</h3>
+    <button onclick="showForm()">Thêm mới</button>
+<input type="button" value="Đóng" onclick="closeForm()">
     <br><br>
-    <input type="hidden" name="secret" value="id khach hang">
-
-    Loại hàng:<select name="" id="">
-    <option value="">Hàng dễ vỡ</option>
-    <option value="">Hàng tươi sống</option>
-    <option value="">Hàng khô</option>
-
-    </select> <br><br>
-    Ghi chú
-    <textarea name="" id="" cols="30" rows="10"></textarea><br><br><br>
-    
-    Ảnh hàng:
-    <input type="file"> <br><br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-
+<form action="" id="myForm2">
+<table border="1" width="100%">
+    <tr>
+        <th>Tên hàng</th>
+        <th>Nơi gửi</th>
+        <th>Dịch vụ đi kèm</th>
+        <th>Ngày giao</th>
+    </tr>
+    <tr>
+        <td>Cá khô</td>
+        <td>Hà Nội</td>
+        <td>Giao nhanh</td>
+        <td>30/02/2020</td>
+    </tr>
+    <tr>
+        <td>Giày</td>
+        <td>Hải Phòng</td>
+        <td>Quà kèm theo</td>
+        <td>31/02/2020</td>
+    </tr>
+    <tr>
+        <td>Áo phông</td>
+        <td>Lào Cai</td>
+        <td>Đóng gói đẹp</td>
+        <td>Tối 30 Tết</td>
+    </tr>
+</table>
 </form>
 </body>
 </html>
