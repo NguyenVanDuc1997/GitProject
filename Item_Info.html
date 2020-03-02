@@ -26,6 +26,9 @@
         function showForm_list() {
             document.getElementById("myForm2").style.display="block";
         }
+        function closeMyForm() {
+            document.getElementById("myForm").style.display="none";
+        }
     </script>
 </head>
 <body>
@@ -89,7 +92,7 @@
         </tr>
         <tr>
             <th>&nbsp;</th>
-            <td><input type="submit" value="Submit">
+            <td><input type="submit" value="Submit" onclick="closeMyForm()" >
                 <input type="reset" value="Reset"> <br><br>
                </td></td>
         </tr>
