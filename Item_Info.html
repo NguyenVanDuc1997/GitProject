@@ -18,16 +18,19 @@
     <script>
         function showForm() {
             document.getElementById("myForm").style.display="block";
-            document.getElementById("myForm2").style.display="block";
+
         }
         function closeForm() {
             document.getElementById("myForm2").style.display = "none";
+        }
+        function showForm_list() {
+            document.getElementById("myForm2").style.display="block";
         }
     </script>
 </head>
 <body>
 <h1>Thông tin hàng hóa</h1>
-
+<form action="">
     <fieldset>
         <legend>Đăng nhập</legend>
         Tài khoản<input type="text"> <br><br>
@@ -36,6 +39,7 @@
         <input type="submit" value="Đăng nhập">
         <input type="reset" value="Nhập lại">
     </fieldset>
+</form>
     <br>
     <form action="#" method="p" id="myForm">
     <table  cellpadding="10">
@@ -96,6 +100,7 @@
 <h3>Danh sách hàng hóa</h3>
     <button onclick="showForm()">Thêm mới</button>
 <input type="button" value="Đóng" onclick="closeForm()">
+<input type="button" value="Hiển thị danh sách" onclick="showForm_list()">
     <br><br>
 <form action="" id="myForm2">
 <table border="1" width="100%">
