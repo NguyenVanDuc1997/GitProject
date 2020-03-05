@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+    <button type="button" onclick="showMess();">
+        Click me
+    </button>
+
+    <script>
+        function showMess() {
+            alert('Xin chào!');
+        }
+    </script>
+    <br><br>
+    <hr>
+
+
+    <div id="messDiv"></div>
+    <button type="button" onclick="showmessDiv();">
+        Click
+    </button>
+    <script>
+        function showmessDiv() {
+            document.getElementById('messDiv').innerHTML ='Chào';
+        }
+    </script>
+    <br><br>
+    <hr>
+
+    <button type="button" onclick="showwrite()">Clickk</button>
+    <script>
+        function showwrite() {
+            document.write('Chào ae')
+        }
+    </script>
+    <br><br>
+    <hr>
+
+    <button type="button" onclick="showlog()"> clich</button>
+    <script>
+        function showlog() {
+            console.log('Chào chào!')
+        }
+    </script>
+
+</body>
+</html>

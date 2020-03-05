@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền</title>
+    <style>
+    </style>
+</head>
+<body>
+<form action="">
+    <table style="width: 50%">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th>&nbsp;</th>
+        </tr>
+
+        <tr>
+            <td align="center"><input type="text" id="sotien"></td>
+            <td align="center">
+                <select name="from" id="from">
+                    <option   value="vietnam" id="vn">VietNam</option>
+                    <option  value="usd" id="us">USD</option>
+                </select>
+            </td>
+            <td align="center">
+                <select name="to" id="to">
+                    <option id="vn1" value="vietnam">VietNam</option>
+                    <option id="us1" value="usd">USD</option>
+                </select>
+            </td>
+            <td align="center">
+                <button onclick="convert()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+</form>
+<script>
+
+    function convert() {
+        let from =document.getElementById('from').value;
+        let to=document.getElementById('to').value;
+        let sotien=document.getElementById('sotien').value;
+        if (from==to){
+                alert("Chuyển đổi cùng loại tiền!");
+        }else {
+            if (from ==document.getElementById('vn').value) {
+                Result = sotien / 23000;
+            } else {
+                Result = sotien * 23000;
+            }
+           document.write("Số tiền chuyển từ "+document.getElementById('from').value+" thành "+document.getElementById('to').value+" là:"+Result);
+        }
+    }
+</script>
+</body>
+</html>

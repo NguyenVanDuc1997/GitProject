@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="BT1()">Bài 1</button>
+<br><br>
+<button onclick="BT2()">Bài 2</button>
+</body>
+
+<script>
+    function BT1() {
+        let a=prompt('Nhập a:')
+        a=parseFloat(a);
+        let b=prompt('Nhập b:')
+        b=parseFloat(b);
+        if ((a+b)<4){
+            alert('Below')
+        }else {
+            alert('Over')
+        }
+    }
+    
+    function BT2() {
+        let mess=prompt('Nhập chuỗi:')
+        if (mess=='Employee'){
+            alert('Hello')
+        }else if (mess=='Director'){
+            alert('Greetings')
+        }else if (mess==""){
+            alert('No login')
+        }else {
+            alert("")
+        }
+    }
+</script>
+</html>

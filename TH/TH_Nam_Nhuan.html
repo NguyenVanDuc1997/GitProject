@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Năm nhuận</title>
+</head>
+<body>
+<input type="text" id="year">
+<button onclick="namnhuan()">Tính</button>
+</body>
+<script>
+
+    function namnhuan() {
+        let year=document.getElementById('year').value;
+        year=parseFloat(year);
+        if (year%4==0 && year%100!=0 ){
+            alert('Năm nhuận')
+        }else if (year%100==0 && year%400==0){
+            alert('Năm nhuận 2')
+        } else {
+            alert('Năm không nhuận')
+        }
+    }
+
+</script>
+</html>

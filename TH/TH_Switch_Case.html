@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Case</title>
+</head>
+<body>
+<button onclick="Bt1()">Bài 1</button>
+<br> <br>
+<button onclick="Bt2()">Bài 2</button>
+</body>
+
+<script>
+    function Bt1() {
+        let browser1=prompt('Nhập browser:')
+        switch (browser1) {
+            case 'Edge':
+                alert('Youve got the Edge!');
+                break;
+            case 'Chrome':
+                case 'Firefox':
+                    case 'Safari':
+                        case 'Opera':
+                            alert('Okay we support these browsers too')
+                break;
+            default :
+                alert('We hope that this page looks ok!');
+        }
+    }
+
+    function Bt2() {
+        let a=prompt('a:')
+        switch (a) {
+            case 0:
+                alert('0')
+                break;
+            case 1:
+                alert('1')
+                break;
+            case 2:
+            case 3:
+                alert("2,3");
+        }
+    }
+</script>
+</html>

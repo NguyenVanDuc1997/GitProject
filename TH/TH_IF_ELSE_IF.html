@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành if else if</title>
+</head>
+<body>
+
+</body>
+<script>
+   let userName=prompt("Who's there?");
+
+   if (userName=='Admin'){
+       let pass=prompt('Nhập pass:')
+       if (pass=='master'){
+           alert('Welcome')
+       }else if (pass==null){
+           alert('Canceled!')
+       }else {
+           alert('sai pass!')
+       }
+
+   }else if (userName==null){
+       alert('Canceled')
+   }else {
+       alert('Do not Know you')
+   }
+</script>
+</html>
