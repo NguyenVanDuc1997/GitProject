@@ -48,15 +48,15 @@
         let donvi = Math.floor(n % 10);
         let str = '';
 
-        str += read9Number(tram_trieu)+ 'trăm' ;
-        str += read9Number(chuc_trieu) + ' mươi ';
-        str += read9Number(trieu) + ' triệu  ';
-        str += read9Number(tram_nghin) + ' trăm ';
-        str += read9Number(chuc_nghin) + ' mươi ';
-        str += read9Number(nghin) + ' nghìn ';
-        str +=read9Number(tram) + ' trăm ';
-        str += read9Number(chuc) + ' mươi ';
-        str += read9Number(donvi);
+        str += read1Number(tram_trieu)+ 'trăm' ;
+        str += read1Number(chuc_trieu) + ' mươi ';
+        str += read1Number(trieu) + ' triệu  ';
+        str += read1Number(tram_nghin) + ' trăm ';
+        str += read1Number(chuc_nghin) + ' mươi ';
+        str += read1Number(nghin) + ' nghìn ';
+        str +=read1Number(tram) + ' trăm ';
+        str += read1Number(chuc) + ' mươi ';
+        str += read1Number(donvi);
 
         return str;
     }
