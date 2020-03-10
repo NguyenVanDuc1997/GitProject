@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc 9 số</title>
+</head>
+<body>
+<input type="button" value="Nhập số" onclick="input()">
+</body>
+
+<script>
+    function read1Number(n) {
+        switch (n) {
+            case 0:
+                return 'Không'
+            case 1:
+                return 'Một'
+            case 2:
+                return 'Hai'
+            case 3:
+                return 'Ba'
+            case 4:
+                return 'Bốn'
+            case 5:
+                return 'Năm'
+            case 6:
+                return 'Sáu'
+            case 7:
+                return 'Bảy'
+            case 8:
+                return 'Tám'
+            case 9:
+                return 'Chín'
+            default:
+                return 'Không biết'
+        }
+    }
+
+    function read9Number(n) {
+        let tram_trieu = Math.floor(n / 100000000);
+        let chuc_trieu = Math.floor(n / 10000000) % 10;
+        let trieu = Math.floor(n / 1000000) % 10;
+        let tram_nghin = Math.floor(n / 100000) % 10;
+        let chuc_nghin = Math.floor(n / 10000) % 10;
+        let nghin = Math.floor(n / 1000) % 10;
+        let tram = Math.floor(n / 100) % 10;
+        let chuc = Math.floor(n / 10) % 10;
+        let donvi = Math.floor(n % 10);
+        let str = '';
+
+        str += read9Number(tram_trieu)+ 'trăm' ;
+        str += read9Number(chuc_trieu) + ' mươi ';
+        str += read9Number(trieu) + ' triệu  ';
+        str += read9Number(tram_nghin) + ' trăm ';
+        str += read9Number(chuc_nghin) + ' mươi ';
+        str += read9Number(nghin) + ' nghìn ';
+        str +=read9Number(tram) + ' trăm ';
+        str += read9Number(chuc) + ' mươi ';
+        str += read9Number(donvi);
+
+        return str;
+    }
+
+    function input() {
+        let n;
+        n = prompt('Nhập một số 9 chữ số:');
+        n = Number.parseFloat(n);
+        alert(read9Number(n))
+    }
+
+</script>
+</html>
