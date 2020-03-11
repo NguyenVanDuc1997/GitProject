@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="tinhSNT()">
+<span id="result"></span>
+</body>
+<script>
+    function tinhSNT() {
+        let n = prompt('Nhập n:')
+        let dem=0;
+        for (let i = 1; i <= n; i++) {
+            if (kiemTraNguyenTo(i)) {
+                dem++;
+                console.log(dem);
+                document.write(i+'<br>')
+            }
+            if (dem>=20){
+                break;
+            }
+        }
+    }
+
+
+    function kiemTraNguyenTo(n) {
+        let flag = true;
+        if (n < 2) {
+            flag = false;
+        } else if (n == 2) {
+            flag = true;
+        } else if (n % 2 == 0) {
+            flag = false;
+        } else {
+            for (let a = 3; a < n - 1; a += 2) {
+                if (n % a == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true) {
+            return n;
+        }
+    }
+</script>
+</html>
