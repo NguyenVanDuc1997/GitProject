@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sử dụng for</title>
+</head>
+<body>
+    <h3>Bài 1</h3>
+    <p id="b1"></p>
+    <br>
+    <hr>
+    <h3>Bài 2</h3>
+    <br><br>
+    <input type="text" id="sum">
+</body>
+
+<script>
+    let text='';
+    for (let i=0;i<5;i++){
+        text+="The number is:"+i+"<br>";
+    }
+    document.getElementById('b1').innerHTML=text;
+
+    let a=prompt('Nhập vào số bất kì:')
+    a=parseInt(a);
+    let sum=0;
+    for (let i=0;i<=a;i++){
+        sum+=i;
+    }
+    document.getElementById('sum').value=sum;
+</script>
+</html>
