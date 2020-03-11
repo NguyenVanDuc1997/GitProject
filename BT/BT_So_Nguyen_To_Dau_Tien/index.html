@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body onload="tinhSNT()">
+<body onload="calculatorPrime()">
 <span id="result"></span>
 </body>
 <script>
-    function tinhSNT() {
+    function calculatorPrime() {
+        let a=prompt('Nhập số số nguyên tố muốn in ra:')
         let n = prompt('Nhập n:')
         let dem=0;
         for (let i = 1; i <= n; i++) {
-            if (kiemTraNguyenTo(i)) {
+            if (prime(i)) {
                 dem++;
                 console.log(dem);
                 document.write(i+'<br>')
             }
-            if (dem>=20){
+            if (dem>=a){
                 break;
             }
         }
     }
 
 
-    function kiemTraNguyenTo(n) {
+    function prime(n) {
         let flag = true;
         if (n < 2) {
             flag = false;
