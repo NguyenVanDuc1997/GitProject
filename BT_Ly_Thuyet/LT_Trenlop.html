@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập 2 giá trị tháng và năm vd 2/2020 và 3/2020
+tính tổng số ngày kéo dài từ 2 đến 3
+<br><br>
+    Nhập năm: <input type="text" id="year"><br><br>
+    Nhập tháng bắt đầu:<input type="text" id="dayStart"><br><br>
+    Nhập tháng kết thúc:<input type="text" id="dayEnd"><br><br>
+    Tổng số ngày: <input type="text" id="result"><br><br>
+    <button onclick="cal()">Tính</button>
+</body>
+<script>
+    
+
+        function cal() {
+            let nam=document.getElementById('year').value;
+            nam=parseFloat(nam);
+            let dayS=document.getElementById('dayStart').value;
+            dayS=parseFloat(dayS);
+            let dayE=document.getElementById('dayEnd').value;
+            dayE=parseFloat(dayE);
+
+            let sum=0;
+            for (let i=dayS;i<=dayE;i++){
+                sum+=tinhNgay(i,nam)
+            }
+            alert(sum)
+        }
+        function tinhNgay(thang, nam){
+            switch(thang){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11: return 30;
+                case 2: if(kiemTraNamNhuan(nam))
+                    return 29;
+                else
+                    return 28;
+                default: return "Không phải là tháng hơp lệ";
+            }
+
+
+        }
+        // Năm nhuân là những năm chia hết cho 400 hoặc chia hết cho 4 nhưng không chia hết cho 100
+        function kiemTraNamNhuan(nam)
+        {
+            return (nam % 400 == 0) || (nam % 4 == 0  && nam % 100 != 0);
+            /*
+                   if((nam % 400 == 0) || (nam % 4 == 0  && nam % 100 != 0))
+                       return true;
+                   else
+                       return false;
+             */
+        }
+
+
+</script>
+</html>
