@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h1>Từ điển</h1>
+<input type="search" id="input">
+<br><br>
+<button onclick="translateE_V()">Tìm kiếm</button>
+<br><br>
+<div id="result"></div>
+</body>
+<script>
+    function translateE_V() {
+        let e = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'Saturday', 'Sunday'];
+        let v = ['Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy', 'Chủ nhật'];
+        let input = document.getElementById('input').value;
+        let check = e.indexOf(input);
+        if (check === -1) {
+            document.getElementById('result').innerHTML = "Không tìm thấy";
+        } else {
+            document.getElementById('result').innerHTML = v[check];
+        }
+    }
+
+</script>
+</html>

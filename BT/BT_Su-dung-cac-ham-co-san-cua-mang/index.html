@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<button onclick="b1()">Bài 1</button>
+<p id="bai1"></p>
+<hr>
+<button onclick="b2()">Bài 2</button>
+<hr>
+<button onclick="b3()">Bài 3</button>
+</body>
+
+<script>
+    function b1() {
+        let array = ["Red", "Green", "White", "Black"];
+        let a = document.getElementById('bai1');
+        a.innerHTML = array.join(';');
+    }
+
+    function b2() {
+        let num = prompt('Nhập 1 dãy số:')
+        let array = [num['']];
+        for (let i = 0; i < num.length; i++) {
+            if (num[i - 1] % 2 == 0 && num[i] % 2 == 0) {
+                array.push('-', num[i]);
+            } else {
+                array.push(num[i]);
+            }
+
+        }
+        console.log(array.join(''));
+    }
+
+    function b3() {
+        let str = prompt("Nhập vào 1 dãy kí tự:")
+        let array = [str['']];
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [''];
+        for (let i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) != -1) {
+                result.push((str[i]).toLowerCase());
+            } else if (LOWER.indexOf(str[i]) != -1) {
+                result.push(str[i].toUpperCase());
+            } else {
+                result.push(str[i]);
+            }
+        }
+        console.log(result.join(''));
+    }
+</script>
+</html>

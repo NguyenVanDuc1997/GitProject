@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking text area</title>
+</head>
+<body>
+<center>
+    <h2>Faking text area</h2>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" onkeydown="typeText()" id="textarea"></textarea>
+
+    </form>
+</center>
+</body>
+<script>
+    let a = new Array();
+    let n = '';
+    a[1] = 'T';
+    a[2] = 'Ô';
+    a[3] = 'I';
+    a[4] = ' ';
+    a[5] = 'N';
+    a[6] = 'G';
+    a[7] = 'Ố';
+    a[8] = 'C';
+
+    function typeText() {
+        t = document.f.txt.value;
+        j = t.length;
+        if (j > 0) {
+            for (let i = 1; i <= j; i++) {
+
+                n += a[i];
+                if (i == 9) {
+                    document.f.txt.value = "";
+                    n = '';
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = '';
+        setTimeout('typeText()', 1);
+    }
+
+</script>
+</html>
