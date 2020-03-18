@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP_1</title>
+
+</head>
+<body>
+
+</body>
+<script src="student.js"></script>
+<script src="studentlist.js"></script>
+<script>
+    //tạo lớp student cho các sinh viên
+    // tạo danh sách các đối tượng sinh viên
+    // hiển thị danh sách sinh viên
+    // sắp xếp theo chiều tăng dần của điểm trung bình
+    // tích hợp bài thực hành để hiển thị sinh viên lên form có sẵn
+    // xây dựng các lớp cho giao diện hàng hóa
+
+
+
+    function main() {
+        // let sv1 = new student('SV01', 'Văn Đức', 'Nguyễn ', 'c0220h2', 8, 9, 7);
+        // let sv2 = new student('SV02', 'Văn Đức 2', 'Nguyễn 2 ', 'c0220h22', 5, 5, 3);
+        // let sv3 = new student('SV03', 'Văn Đức 3', 'Nguyễn 3', 'c0220h23', 3, 10, 6);
+        //
+        // sv1.show();
+        // sv2.show();
+        // sv3.show();
+
+        let sList= new StudentList();
+        sList.initStudentList();
+        sList.showStudentList();
+        document.write("======= sau khi sắp xếp =======<br><hr>");
+        sList.sortStudentList();
+        sList.showStudentList();
+    }
+
+    main();
+
+</script>
+</html>
