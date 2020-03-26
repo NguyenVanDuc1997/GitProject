@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Searching and Sorting</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    const MAX = 100;
+
+    function myArray() {
+        this.arr = new Array(MAX);
+
+        // Khởi tạo mảng
+        this.init = function () {
+            for (let i = 0; i < MAX; i++) {
+                this.arr[i] = Math.round(Math.random() * 1000);
+            }
+        }
+        //HIện mảng
+        this.show = function () {
+            document.write(this.arr.join(',  '));
+        }
+
+        // tìm kiếm tuần tự
+        this.frequencySearch = function (x) {
+            for (let i = 0; i < this.arr.length; i++) {
+                if (this.arr[i] == x)
+                    return i;
+
+            }
+            return -1;
+        }
+
+        //tìm kiếm tuần tự bổ sung
+        this.frequencySearchList = function (x) {
+
+            let resultArr = new Array();
+            for (let i = 0; i < this.arr.length; i++) {
+                if (this.arr[i] == x)
+                    resultArr.push(i);
+            }
+            return resultArr;
+        }
+
+        // Tìm kiếm nhị phân
+        this.binarySearch = function (x) {
+            let left = 0;
+            let right = this.arr.length - 1;
+            while (left <= right) {
+                let middle = Math.floor((left + right) / 2);
+                if (this.arr[middle] == x)
+                    return middle;
+                else if (this.arr[middle] > x)
+                    right = middle - 1;
+                else
+                    left = middle = 1;
+            }
+            return -1;
+        }
+
+        // tìm kiếm nhị phân bằng đệ quy
+        this.binarySearchRecursive = function (left, right, n) {
+            if (left > right)
+                return -1;
+            let middle = Math.floor((left + right) / 2);
+            if (this.arr[middle] == n)
+                return middle;
+            else if (this.arr[middle] > n)
+                return this.binarySearchRecursive(left, middle - 1, n);
+            else return this.binarySearchRecursive(middle + 1, right, n);
+        }
+
+        //sắp xếp lựa chọn
+        this.selectionSort = function () {
+            for (let i = 0; i < this.arr.length - 1; i++) {
+                let posMin = i;
+                for (let j = i + 1; j < this.arr.length; j++)
+                    if (this.arr[j] < this.arr[posMin])
+                        posMin = j;
+                let tmp = this.arr[i];
+                this.arr[i] = this.arr[posMin];
+                this.arr[posMin] = tmp;
+            }
+        }
+
+    }
+
+    function main() {
+        let myArr = new myArray();
+        myArr.init();
+        myArr.show();
+        myArr.selectionSort();
+        document.write("<br> sau khi sắp xếp : <br>");
+        myArr.show();
+        let x = 123;
+        // document.write("<br>Vị trí của số cần tìm là: "+x +" tại vị trí "+ myArr.frequencySearch(x));
+        document.write("<br>Vị trí của số cần tìm là: " + x + " tại vị trí " + myArr.binarySearch(x));
+
+        // let r = myArr.frequencySearchList(x);
+        // if (r.length == 0)
+        //     document.write("<br>Không tìm thấy <br>");
+        // else document.write("<br>Kết quả là : " + r.join(" , "))
+    }
+
+    main();
+
+    let date = new Date();
+</script>
+</html>

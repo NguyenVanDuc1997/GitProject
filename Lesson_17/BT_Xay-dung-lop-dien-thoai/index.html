@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại </title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+<body>
+
+<div class="mobile" id="iphone">
+    <div class="title-name" style="text-align: left" id="iphone-status">Status
+        <button style="float: right" onclick="power(mobile1)">Power</button>
+    </div>
+    <div class="title-name" style="text-align: left" >Battery <span style="float: right" id="iphone-batterry">100%</span>
+        <button onclick="mobile1.charging(mobile1,mobile1.battery, )">Charge</button>
+    </div>
+    <div class="title-name" id="iphone-name">Mobile 1</div>
+    <div type="text" class="inbox" id="iphone-inbox"> inbox</div>
+    <div type="text" class="outbox" id="iphone-outbox">out box</div>
+    <input class="msg" id="iphone-msg" oninput="mobile1.writeMsg(this.value)">
+    <button class="send" onclick="sendMess(mobile1,mobile2)">Send</button>
+
+</div>
+
+<hr>
+<div class="mobile" id="samsung">
+    <div class="title-name" style="text-align: left" id="samsung-status">Status
+        <button style="float: right" onclick="power(mobile2)">Power</button>
+    </div>
+    <div class="title-name" style="text-align: left" >Battery <span style="float: right" id="samsung-baterry">100%</span>
+        <button onclick="mobile2.charging(mobile2,mobile2.battery,)">Charge</button>
+    </div>
+    <div class="title-name" id="samsung-name">Mobile 2</div>
+    <div type="text" class="inbox" id="samsung-inbox"> inbox</div>
+    <div type="text" class="outbox" id="samsung-outbox">out box</div>
+    <input type="text" class="msg" id="samsung-msg" oninput="mobile2.writeMsg(this.value)">
+    <button class="send" onclick="sendMess(mobile2,mobile1)">Send</button>
+
+</div>
+
+</body>
+<script src="js.js"></script>
+</html>

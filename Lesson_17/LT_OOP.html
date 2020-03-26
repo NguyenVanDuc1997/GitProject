@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    //cho biết hôm này là thứ mấy
+    //2.Nhập 1 xâu kí tự và chuẩn hóa xâu:
+    //Không có kí tự trắng ở đầu và cuối câu
+    //Không có nhiều dấu cách liên tiếp nhau
+    //Chỉ đầu câu được viết hoa
+
+    // let d=new Date();
+    // console.log(d);
+    //
+    function getDay() {
+        const thu = ['Chủ nhật', 'Thứ hai ', 'Thứ ba ', 'Thứ tư ', 'Thứ năm ', 'Thứ sáu ', 'Thứ Bảy '];
+        let d = new Date
+        let ind = d.getDay();
+        return thu[ind];
+    }
+
+    console.log(getDay());
+
+    let d1 = new Date();
+    for (let i = 0; i < 1000; i++) {
+        document.write('Hom nay')
+    }
+    let d2 = new Date();
+
+    console.log(d2.getMilliseconds() - d1.getMilliseconds());
+
+    function normalizeString(str) {
+        let a = str.split(" ");
+        //alert(a.join());
+        //loai bo dau cach
+        let i;
+        let b = new Array();
+        for (let i = 0; i < a.length; i++) {
+            if (a[i].length > 0) {
+                b.push(a[i]);
+            }
+        }
+        let tmp = b.join(" ");
+        //chuan hoa chu hoa
+
+        let tmpUpCase = tmp.toUpperCase();
+
+
+        //viet hoa chu cai dau
+        tmp = tmp.toLowerCase();
+        tmp = tmpUpCase.charAt(0) + tmp.substring(i + 2, tmp.length);
+
+       // tmp[0] = tmpUpCase[0];
+
+
+        //viet hoa cac dau tu
+        for (let i = 0; i < tmp.length; i++) {
+            if (tmp.charAt(i) == ' ') {
+                tmp = tmp.substring(0, i) + tmpUpCase.charAt(i + 1) + tmp.substring(i + 2, tmp.length);
+            }
+        }
+        return tmp;
+    }
+
+    let x = normalizeString("  NguyeN   VAn   An")
+    console.log(x);
+</script>
+</html>

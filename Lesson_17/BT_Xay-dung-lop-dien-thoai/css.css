@@ -1,0 +1,17 @@
+.mobile{
+    width: 400px;
+    height: 500px;
+    background-color: cornflowerblue;
+    border: 1px solid;
+    float: left;
+    margin-right: 25px;
+}
+.title-name{
+    border: 1px solid;
+    text-align: center;
+}
+.inbox,.outbox{
+    width:  100%;
+    border: 1px solid;
+    height: 200px;
+}

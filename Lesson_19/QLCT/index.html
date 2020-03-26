@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THÔNG TIN CẦU THỦ</title>
+    <style>
+        /*#myForm {*/
+        /*    display: none;*/
+        /*}*/
+
+    </style>
+
+
+</head>
+<body>
+<h3>THÔNG TIN CẦU THỦ</h3>
+<form action="#" method="p" id="myForm">
+    <table>
+        <tr>
+            <td width="100">Họ tên</td>
+            <td><input type="text" name="fullname" value="" placeholder="Jame" id="playerName"></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="date" name="DOB" id="playerBirth"></td>
+        </tr>
+        <tr>
+            <td>Chân thuận</td>
+            <td><input type="radio" name="legs"> Trái
+                <input type="radio" name="legs"> Phải <br></td>
+        </tr>
+        <tr>
+            <td>Vị trí sở trường</td>
+            <td><select id="position">
+                <option value="ST">Tiền Đạo</option>
+                <option value="MF"> Tiền Vệ</option>
+                <option value="DF"> Hậu Vệ</option>
+                <option value="GK">Thủ Môn</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Vị trí khác</td>
+            <td><input type="checkbox" name="positionPlus" value="Tiền Đạo"> Tiền Đạo
+                <input type="checkbox" name="positionPlus" value="Tiền Vệ"> Tiền Vệ
+                <input type="checkbox" name="positionPlus" value="Hậu Vệ"> Hậu Vệ
+            </td>
+        </tr>
+        <tr>
+            <td>Ảnh thẻ</td>
+            <td><input type="file" name="avatar" ></td>
+        </tr>
+
+
+        <tr>
+            <td>Chiều Cao</td>
+            <td><input type="text" name="height" id="stuLog">cm</td>
+        </tr>
+        <tr>
+            <td>Cân nặng</td>
+            <td><input type="text" name="weight">kg</td>
+        </tr>
+
+        <tr>
+            <td width="100">Tiền sử chấn thương </td>
+            <td><textarea name="injury" placeholder="abc"></textarea></td>
+        </tr>
+
+        <tr>
+            <td width="100"></td>
+            <td><input type="button" value="Lưu" onclick="main()">
+                <input type="reset" value="Nhập lại">
+                <input type="button" value="Đóng" onclick="closeForm()"></td>
+        </tr>
+    </table>
+</form>
+<h3>DANH SÁCH CẦU THỦ</h3>
+<button onclick="showForm()">Thêm cầu thủ </button>
+<br>
+<table border="1" id="tableList">
+    <tr>
+        <th>Mã CT</th>
+        <th>Họ tên</th>
+        <th>Ngày sinh</th>
+        <th>Quê quán</th>
+        <th>Vị trí sở trường </th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+<!--        <td id="stt">1</td>-->
+        <td id="mact">ABC123</td>
+        <td id="tenct">Nguyen Van An</td>
+        <td id="namsinh"> 01/01/2000</td>
+        <td id="quequan">Ha Noi</td>
+        <td id="vitri">AnNV123</td>
+        <td>
+            <button>Sửa</button>
+            |
+            <button>Xóa</button>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+<script>
+    function showForm() {
+        document.getElementById("myForm").style.display = "block";
+
+    }
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+
+    }
+</script>
+
+
+</html>
