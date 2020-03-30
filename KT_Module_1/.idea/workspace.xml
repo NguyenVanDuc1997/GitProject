@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e613b909-5f37-49c3-9de7-fa3f79e2c826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai_3/bai_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_3/bai_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai_3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_3/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bai_4/Bai_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_4/Bai_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai_4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_4/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
       <updated>1585553656794</updated>
       <workItem from="1585553658113" duration="2764000" />
       <workItem from="1585556442707" duration="4548000" />
-      <workItem from="1585561396705" duration="87000" />
+      <workItem from="1585561396705" duration="1045000" />
     </task>
     <servers />
   </component>

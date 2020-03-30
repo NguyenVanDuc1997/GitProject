@@ -13,6 +13,6 @@ class Circle {
         ctx.fill();
     }
 }
-let circle = new Circle();
-circle.render(10,10,100,"#000000");
+let circle = new Circle(10,10,100,"#000000");
+circle.render();
 console.log("a")
